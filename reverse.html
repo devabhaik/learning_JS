@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Reverse</title>
+  </head>
+  <body>
+    <h1>
+      Geeky Shows
+    </h1>
+    <input type="text" placeholder="Enter Text Here" id="intext" />
+    <button type="submit" id="bTn" onclick="reverseText()">click here</button>
+
+    <div id="num"></div>
+
+    <script>
+      function reverseText(result) {
+        let textAdd = document.getElementById('intext').value;
+        let orText = document.getElementById('intext').value;
+        let texRev = textAdd.split('').reverse().join('');
+        // var node = document.createElement('p');
+        // var textnode = document.createTextNode(textAdd);
+        // node.appendChild(textnode);
+        // document.getElementById('num').appendChild(node);
+
+        if (orText === texRev) {
+          var node = document.createElement('p');
+
+          node.innerText = textAdd + ' ' + 'is Plaindrome Text';
+          // document.getElementById('num').appendChild(node);
+
+          document.getElementById('num').appendChild(node);
+          // document.getElementById('num').innerHTML =
+          // texRev + 'is a palindrome Text';
+        } else {
+          // document.getElementById('num').innerHTML =
+          // textAdd + ' ' + 'Opps! Wrong because not a palindrome Text';
+
+          var node = document.createElement('p');
+          node.innerText =
+            textAdd + ' ' + 'Opps! Wrong because not a palindrome Text';
+          document.getElementById('num').appendChild(node);
+
+          // document.getElementById('num').appendChild(node);
+        }
+      }
+    </script>
+  </body>
+</html>

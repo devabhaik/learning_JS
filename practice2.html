@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>practical 2</title>
+  </head>
+  <body>
+    <h1>Geeky shows</h1>
+    <label>Enter Number</label>
+    <input type="text" id="num" placeholder="Enter Number Here" />
+    <button type="submit" id="bTn" onclick="multiply()">
+      Click Here
+    </button>
+    <div id="paragraph"></div>
+    <script>
+      // function multiply() {
+      //   let numbers = document.getElementById('num').value;
+      //   let post = document.createElement('p');
+      //   post.innerText = numbers;
+      //   document.getElementById('paragraph').appendChild(post);
+      // }
+
+      function multiply() {
+        let num = document.getElementById('num').value;
+        let mult = 1;
+        for (let i = num; i >= 1; i--) {
+          mult = mult * i;
+        }
+        document.getElementById('paragraph').innerHTML = mult;
+      }
+    </script>
+  </body>
+</html>

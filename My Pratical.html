@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tutorial 1</title>
+  </head>
+  <body>
+    <h1>
+      Geeky Shows
+    </h1>
+    <!---<label>Sr No : </label>
+    <input type="text" id="srNo" />
+    <br /><br />-->
+    <label>Student Name : </label>
+    <input type="text" id="stName" placeholder="Enter Name" />
+    <br /><br />
+    <label>class :</label>
+    <input type="text" id="classes" placeholder="Enter classes" />
+    <br /><br />
+    <label>Number :</label>
+    <input type="text" id="num" placeholder="Enter Number" />
+    <button id="addBtn" type="submit" onclick="addition()">
+      Submitt
+    </button>
+    <div>
+      <p id="addScript"></p>
+      <p id="addipt"></p>
+    </div>
+
+    <script type="text/javascript">
+      // function createList() {
+      //   let stName = document.getElementById('stName').value;
+      //   let classes = document.getElementById('classes').value;
+      //   document.getElementById('addScript').innerHTML =
+      //     'Student Name : ' + stName + '<br>' + 'class : ' + classes;
+      // }
+      // let name = 'Devidas';
+      // let notice = prompt('Are you ready ?');
+      // document.write(notice + '<br>');
+
+      // document.write('Hello World <br>');
+
+      // document.write('variable <br>');
+
+      // document.write('Hello World ' + name + '<br>');
+
+      // let marks = [90, 90, 40, 90, 90];
+      // let percent = 0;
+      // let x = function average() {
+      //   for (let i = 0; i < marks.length; i++) {
+      //     percent = percent + marks[i];
+      //   }
+      //   return (percent / (100 * marks.length)) * 100;
+      // };
+      // x(marks);
+
+      // document.write('percentage :' + x(marks) + '<br><br>');
+
+      // var tarikh = new Date(2018, 12, 13, 12, 30, 40, 56);
+      // document.write(tarikh + '<br>');
+      // function lel() {
+      //   let dev = document.getElementById('stName').value;
+      //   let d = dev.length;
+      //   document.getElementById('addipt').innerHTML = d;
+      // }
+      // let price = 12014212;
+      // document.write(price + '<br>');
+
+      // let a = 25,
+      //   b = 5,
+      //   c = a == b;
+      // document.write(c);
+      function addition(result) {
+        let num = document.getElementById('num').value;
+        let firstNumber = 1;
+        let secondNumber = 2;
+        let numbers = `${firstNumber}</br>${secondNumber}`;
+
+        while (firstNumber + secondNumber <= num) {
+          let tempFirstNumber = firstNumber;
+          firstNumber = secondNumber;
+          secondNumber = tempFirstNumber + secondNumber;
+          numbers = numbers + `</br> ${secondNumber}`;
+        }
+
+        document.getElementById('addScript').innerHTML = numbers;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+.no {
+  background-color: rgb(34, 116, 116);
+  width: 10%;
+  margin-top: 10px;
+  display: inline;
+  padding: 10px;
+}
+.ajit {
+  color: red;
+  font-size: 30px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Multification</title>
+  </head>
+  <body>
+    <h1>
+      Geeky Shows
+    </h1>
+    <input type="text" id="newName" placeholder="Enter Name" />
+    <input type="text" id="newNum" placeholder="Enter Number" />
+
+    <button type="submit" id="bTn" onclick="multification()">
+      Click Here
+    </button>
+    <br />
+    <br />
+    <div id="addN">Number</div>
+
+    <script>
+      function multification() {
+        let num = document.getElementById('newNum').value;
+        let name = document.getElementById('newName').value;
+        for (let i = 0; i <= num; i++) {
+          let add = document.createElement('p');
+          add.innerText = name;
+          document.getElementById('addN').appendChild(add);
+          document.getElementById('newName').value = '';
+          document.getElementById('newNum').value = '';
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OddEven</title>
+  </head>
+  <body>
+    <h1>
+      Geeky Shows
+    </h1>
+    <input type="text" id="num" placeholder="Enter Number Here" />
+    <button type="submit" onclick="oddEven()">Click Here</button>
+    <div id="oddEven"></div>
+
+    <script>
+      function oddEven() {
+        let arr = [];
+        let num = document.getElementById('num').value;
+        let event = 0;
+        let even = num % 2;
+        if (even == 0) {
+          for (let i = event; i < +event + 1; i++) {
+            for (let j = i; j <= num; j++) {
+              let eveNum = document.createElement('p');
+              eveNum.innerText = i * j;
+              document.getElementById('oddEven').appendChild(eveNum);
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
